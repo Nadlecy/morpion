@@ -10,9 +10,9 @@ def display(tab):
     for i in tab:
         # alors pour u dans i
         for u in i:
-            #alors afficher chaque u sur la meme ligne
+            #alors afficher chaque u sur la meme ligne i
             print(u,end="")
-        # passer a la ligne suivante
+        # retour a la ligne
         print()
 
 """EVALUTAION ENTREE"""
@@ -40,16 +40,15 @@ ans = input("position ?").split()
             # alors assigner a la variable a l'index 1 de ans la valeur 2
         # sinon
             # alors assigner a ansValid la valeur False
-""""""
-
+"""CHANGEMENT DE PARTIE USER"""
+        # si ansValid est egale a True
+            #
 # sinon
     # alors assigner a la variable ansValid la valeur False
 # si ansValid est egale a False
     # alors afficher "Réponse Invalide !"
 # sinon 
     #alors
-"""CHANGEMENT PARTIE DE TABLEAU (USER)"""
-    #
 
 
 # definir une fonction morpion() qui ne prend aucun parametre
