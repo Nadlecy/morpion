@@ -1,6 +1,6 @@
 # Debut
 
-# On admet une fonction input() qui enregistre l'entree d'un joueur sous forme de str
+# On admet une fonction input() qui enregistre l'entree d'un joueur sous forme de str (avec optionellement un message faisant office question)
 
 # On admet une fonction split() qui prend en parametre une chaine de caracteres str et renvoie une liste separant le contenu de str a chaque espace
 
@@ -19,7 +19,12 @@ def display(tab):
 """DEBUT FONCTION MORPION"""
 # definir une fonction morpion() qui ne prend aucun parametre
     # assigner a la variable morp le tableau [["_  ","_  ","_  "],["_  ","_  ","_  "],["_  ","_  ","_  "]]
-    # assigner a la variable win la valeur False
+    # assigner a la variable numPlays la valeur 0
+    # assigner a la variable choiceStartDone la valeur False
+    # tant que choiceStartDone est egale a False
+        # alors
+        # assigner a la variable userStart le retour de la fonction input() avec le message "Voulez-vous jouer en premier ? y/n"
+        # si userStart est egale a "y" ou "yes" ou "n" ou "no"
 
 
 
