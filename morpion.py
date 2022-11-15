@@ -18,13 +18,21 @@ def display(tab):
 
 """DEBUT FONCTION MORPION"""
 # definir une fonction morpion() qui ne prend aucun parametre
+"""INITIALISATION MOTERHFUCKKRe"""
     # assigner a la variable morp le tableau [["_  ","_  ","_  "],["_  ","_  ","_  "],["_  ","_  ","_  "]]
     # assigner a la variable numPlays la valeur 0
+    # assigner a la variable playerWin la valeur False
+    # assigner a la variable comWin la valeur False
     # assigner a la variable choiceStartDone la valeur False
     # tant que choiceStartDone est egale a False
         # alors
         # assigner a la variable userStart le retour de la fonction input() avec le message "Voulez-vous jouer en premier ? y/n"
-        # si userStart est egale a "y" ou "yes" ou "n" ou "no"
+        # si userStart est egale a "y" ou "n"
+            # alors assigner a choiceStartDone la valeur True
+        # sinon
+            # alors afficher le message "Réponse invalide!"
+"""DEBUT BOUCLE ROUNDS"""
+    # tant que 
 
 
 
@@ -33,7 +41,7 @@ def display(tab):
 """EVALUTAION ENTREE JOUEUR"""
 # assigner a la variable userTurnDone la valeur False
 # tant que userTurnDone est egale a False
-    # assigner a la variable ans le retour de la fonction split appliquee sur le retour de la fonction input
+    # assigner a la variable ans le retour de la fonction split appliquee sur le retour de la fonction input avec le message "position ?"
     # assigner a la variable ansValid la valeur True
     # si ans contient exactement deux éléments
 """analyse ligne"""
@@ -62,6 +70,8 @@ def display(tab):
                 #alors
                 # si la valeur de la variable dans morp aux indices u dans i (où i est la valeur dans ans à l'indice 0 et u est la valeur dans ans à l'indice 1) est egale a "_  "
                     # alors assigner a la variable dans morp aux indices u dans i (où i est la valeur dans ans à l'indice 0 et u est la valeur dans ans à l'indice 1) la valeur "X  "
+                    # utiliser la fonction display() avec morp en parametre
+                    # incrementer numPlays de 1
                     # assigner a userTurnDone la valeur True
                 # sinon 
                     # alors assigner a ansValid la valeur False
