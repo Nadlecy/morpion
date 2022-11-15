@@ -15,46 +15,56 @@ def display(tab):
         # retour a la ligne
         print()
 
-"""EVALUTAION ENTREE"""
-# assigner a la variable ans le retour de la fonction split appliquee sur le retour de la fonction input
-ans = input("position ?").split()
-# assigner a la variable ansValid la valeur True
-# si ans contient exactement deux éléments
+
+"""DEBUT FONCTION MORPION"""
+# definir une fonction morpion() qui ne prend aucun parametre
+    # assigner a la variable morp le tableau [["_  ","_  ","_  "],["_  ","_  ","_  "],["_  ","_  ","_  "]]
+
+
+
+
+
+"""EVALUTAION ENTREE JOUEUR"""
+# assigner a la variable userTurnDone la valeur False
+# tant que userTurnDone est egale a False
+    # assigner a la variable ans le retour de la fonction split appliquee sur le retour de la fonction input
+    # assigner a la variable ansValid la valeur True
+    # si ans contient exactement deux éléments
 """analyse ligne"""
-    # alors
-    # si la valeur a l'index 0 de ans est egale a "top" ou "t"
-        # alors assigner a la variable a l'index 0 de ans la valeur 0
-    # sinon si la valeur a l'index 0 de ans est egale a "mid" ou "middle" ou "m"
-        # alors assigner a la variable a l'index 0 de ans la valeur 1
-    # sinon si la valeur a l'index 0 de ans est egale a "bot" ou "bottom" ou "b"
-        # alors assigner a la variable a l'index 0 de ans la valeur 2
-    # sinon
-        # alors assigner a ansValid la valeur False
-"""analyse colonne"""
-    # si ansValid est egale a True
-        # si la valeur a l'index 1 de ans est egale a "left" ou "l"
-            # alors assigner a la variable a l'index 1 de ans la valeur 0
-        # sinon si la valeur a l'index 1 de ans est egale a "center" ou "c"
-            # alors assigner a la variable a l'index 1 de ans la valeur 1
-        # sinon si la valeur a l'index 1 de ans est egale a "right" ou "r"
-            # alors assigner a la variable a l'index 1 de ans la valeur 2
+        # alors
+        # si la valeur a l'index 0 de ans est egale a "top" ou "t"
+            # alors assigner a la variable a l'index 0 de ans la valeur 0
+        # sinon si la valeur a l'index 0 de ans est egale a "mid" ou "middle" ou "m"
+            # alors assigner a la variable a l'index 0 de ans la valeur 1
+        # sinon si la valeur a l'index 0 de ans est egale a "bot" ou "bottom" ou "b"
+            # alors assigner a la variable a l'index 0 de ans la valeur 2
         # sinon
             # alors assigner a ansValid la valeur False
-"""CHANGEMENT DE PARTIE USER"""
+"""analyse colonne"""
         # si ansValid est egale a True
-            #
-# sinon
-    # alors assigner a la variable ansValid la valeur False
-# si ansValid est egale a False
-    # alors afficher "Réponse Invalide !"
-# sinon 
-    #alors
-
-
-# definir une fonction morpion() qui ne prend aucun parametre
-    # assigner a la variable morp le tableau [["_ ","_ ","_ "],["_ ","_ ","_ "],["_ ","_ ","_ "]]
+            #alors
+            # si la valeur a l'index 1 de ans est egale a "left" ou "l"
+                # alors assigner a la variable a l'index 1 de ans la valeur 0
+            # sinon si la valeur a l'index 1 de ans est egale a "center" ou "c"
+                # alors assigner a la variable a l'index 1 de ans la valeur 1
+            # sinon si la valeur a l'index 1 de ans est egale a "right" ou "r"
+                # alors assigner a la variable a l'index 1 de ans la valeur 2
+            # sinon
+                # alors assigner a ansValid la valeur False
+"""CHANGEMENT DE PARTIE USER"""
+            # si ansValid est egale a True
+                #alors
+                # si la valeur de la variable dans morp aux indices u dans i (où i est la valeur dans ans à l'indice 0 et u est la valeur dans ans à l'indice 1) est egale a "_  "
+                    # alors assigner a la variable dans morp aux indices u dans i (où i est la valeur dans ans à l'indice 0 et u est la valeur dans ans à l'indice 1) la valeur "X  "
+                    # assigner a userTurnDone la valeur True
+                # sinon 
+                    # alors assigner a ansValid la valeur False
+    # sinon
+        # alors assigner a la variable ansValid la valeur False
+    # si ansValid est egale a False
+        # alors afficher "Réponse Invalide !"
 
 
 # Fin
 
-display([["_ ","_ ","_ "],["_ ","_ ","_ "],["_ ","_ ","_ "]])
+display([["_  ","_  ","_  "],["_  ","_  ","_  "],["_  ","_  ","_  "]])
