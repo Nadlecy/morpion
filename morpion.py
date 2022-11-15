@@ -49,48 +49,49 @@ def display(tab):
                     # incrementer numPlays de 1
                     # assigner a comTurnDone la valeur True
 """EVALUTAION ENTREE JOUEUR"""
-        # assigner a la variable userTurnDone la valeur False
-        # tant que userTurnDone est egale a False
-            # assigner a la variable ans le retour de la fonction split appliquee sur le retour de la fonction input avec le message "position ?"
-            # assigner a la variable ansValid la valeur True
-            # si ans contient exactement deux éléments
+        # si numPlays est inferieure a 9
+            # assigner a la variable userTurnDone la valeur False
+            # tant que userTurnDone est egale a False
+                # assigner a la variable ans le retour de la fonction split appliquee sur le retour de la fonction input avec le message "position ?"
+                # assigner a la variable ansValid la valeur True
+                # si ans contient exactement deux éléments
 """analyse ligne"""
-            # alors
-            # si la valeur a l'indice 0 de ans est egale a "top" ou "t"
-                # alors assigner a la variable a l'indice 0 de ans la valeur 0
-            # sinon si la valeur a l'indice 0 de ans est egale a "mid" ou "middle" ou "m"
-                # alors assigner a la variable a l'indice 0 de ans la valeur 1
-            # sinon si la valeur a l'indice 0 de ans est egale a "bot" ou "bottom" ou "b"
-                # alors assigner a la variable a l'indice 0 de ans la valeur 2
-            # sinon
-                # alors assigner a ansValid la valeur False
-"""analyse colonne"""
-            # si ansValid est egale a True
-                #alors
-                # si la valeur a l'indice 1 de ans est egale a "left" ou "l"
-                    # alors assigner a la variable a l'indice 1 de ans la valeur 0
-                # sinon si la valeur a l'indice 1 de ans est egale a "center" ou "c"
-                    # alors assigner a la variable a l'indice 1 de ans la valeur 1
-                # sinon si la valeur a l'indice 1 de ans est egale a "right" ou "r"
-                    # alors assigner a la variable a l'indice 1 de ans la valeur 2
+                # alors
+                # si la valeur a l'indice 0 de ans est egale a "top" ou "t"
+                    # alors assigner a la variable a l'indice 0 de ans la valeur 0
+                # sinon si la valeur a l'indice 0 de ans est egale a "mid" ou "middle" ou "m"
+                    # alors assigner a la variable a l'indice 0 de ans la valeur 1
+                # sinon si la valeur a l'indice 0 de ans est egale a "bot" ou "bottom" ou "b"
+                    # alors assigner a la variable a l'indice 0 de ans la valeur 2
                 # sinon
                     # alors assigner a ansValid la valeur False
+"""analyse colonne"""
+                    # si ansValid est egale a True
+                        #alors
+                        # si la valeur a l'indice 1 de ans est egale a "left" ou "l"
+                            # alors assigner a la variable a l'indice 1 de ans la valeur 0
+                        # sinon si la valeur a l'indice 1 de ans est egale a "center" ou "c"
+                            # alors assigner a la variable a l'indice 1 de ans la valeur 1
+                        # sinon si la valeur a l'indice 1 de ans est egale a "right" ou "r"
+                            # alors assigner a la variable a l'indice 1 de ans la valeur 2
+                        # sinon
+                            # alors assigner a ansValid la valeur False
 """CHANGEMENT DE PARTIE USER"""
-                # si ansValid est egale a True
-                    #alors
-                    # si la valeur de la variable dans morp aux indices u dans i (où i est la valeur dans ans à l'indice 0 et u est la valeur dans ans à l'indice 1) est egale a "_  "
-                        # alors assigner a la variable dans morp aux indices u dans i (où i est la valeur dans ans à l'indice 0 et u est la valeur dans ans à l'indice 1) la valeur "X  "
-                        # utiliser la fonction display() avec morp en parametre
-                        # incrementer numPlays de 1
-                        # assigner a userTurnDone la valeur True
-                    # sinon 
-                        # alors assigner a ansValid la valeur False
-        # sinon
-            # alors assigner a la variable ansValid la valeur False
-        # si ansValid est egale a False
-            # alors afficher "Réponse Invalide !"
-"""ENTREE ORDI SI JOUE EN PREMIERIERIMLEILMEI"""
-        # si userStart est egale a "y":
+                        # si ansValid est egale a True
+                            #alors
+                            # si la valeur de la variable dans morp aux indices u dans i (où i est la valeur dans ans à l'indice 0 et u est la valeur dans ans à l'indice 1) est egale a "_  "
+                                # alors assigner a la variable dans morp aux indices u dans i (où i est la valeur dans ans à l'indice 0 et u est la valeur dans ans à l'indice 1) la valeur "X  "
+                                # utiliser la fonction display() avec morp en parametre
+                                # incrementer numPlays de 1
+                                # assigner a userTurnDone la valeur True
+                            # sinon 
+                                # alors assigner a ansValid la valeur False
+            # sinon
+                # alors assigner a la variable ansValid la valeur False
+            # si ansValid est egale a False
+                # alors afficher "Réponse Invalide !"
+"""ENTREE ORDI SI JOUE EN DEUXIEIIEMIEMEI"""
+        # si userStart est egale a "y" et numPlays est inferieure a 9:
             # alors assigner a la variable comTurnDone la valeur False
             # tant que comTurnDone est egale a False
                 # alors
@@ -100,7 +101,9 @@ def display(tab):
                     # utiliser la fonction display() avec morp en parametre
                     # incrementer numPlays de 1
                     # assigner a comTurnDone la valeur True
-
+"""LINE CHECK"""
+        # 
+    
 
 # Fin
 
