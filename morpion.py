@@ -123,5 +123,3 @@ def display(tab):
         # alors renvoyer le message "Egalité!"
 
 # Fin
-
-display([["_  ","_  ","_  "],["_  ","_  ","_  "],["_  ","_  ","_  "]])
