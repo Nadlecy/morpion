@@ -19,6 +19,7 @@ def display(tab):
 """DEBUT FONCTION MORPION"""
 # definir une fonction morpion() qui ne prend aucun parametre
     # assigner a la variable morp le tableau [["_  ","_  ","_  "],["_  ","_  ","_  "],["_  ","_  ","_  "]]
+    # assigner a la variable win la valeur False
 
 
 
@@ -32,23 +33,23 @@ def display(tab):
     # si ans contient exactement deux éléments
 """analyse ligne"""
         # alors
-        # si la valeur a l'index 0 de ans est egale a "top" ou "t"
-            # alors assigner a la variable a l'index 0 de ans la valeur 0
-        # sinon si la valeur a l'index 0 de ans est egale a "mid" ou "middle" ou "m"
-            # alors assigner a la variable a l'index 0 de ans la valeur 1
-        # sinon si la valeur a l'index 0 de ans est egale a "bot" ou "bottom" ou "b"
-            # alors assigner a la variable a l'index 0 de ans la valeur 2
+        # si la valeur a l'indice 0 de ans est egale a "top" ou "t"
+            # alors assigner a la variable a l'indice 0 de ans la valeur 0
+        # sinon si la valeur a l'indice 0 de ans est egale a "mid" ou "middle" ou "m"
+            # alors assigner a la variable a l'indice 0 de ans la valeur 1
+        # sinon si la valeur a l'indice 0 de ans est egale a "bot" ou "bottom" ou "b"
+            # alors assigner a la variable a l'indice 0 de ans la valeur 2
         # sinon
             # alors assigner a ansValid la valeur False
 """analyse colonne"""
         # si ansValid est egale a True
             #alors
-            # si la valeur a l'index 1 de ans est egale a "left" ou "l"
-                # alors assigner a la variable a l'index 1 de ans la valeur 0
-            # sinon si la valeur a l'index 1 de ans est egale a "center" ou "c"
-                # alors assigner a la variable a l'index 1 de ans la valeur 1
-            # sinon si la valeur a l'index 1 de ans est egale a "right" ou "r"
-                # alors assigner a la variable a l'index 1 de ans la valeur 2
+            # si la valeur a l'indice 1 de ans est egale a "left" ou "l"
+                # alors assigner a la variable a l'indice 1 de ans la valeur 0
+            # sinon si la valeur a l'indice 1 de ans est egale a "center" ou "c"
+                # alors assigner a la variable a l'indice 1 de ans la valeur 1
+            # sinon si la valeur a l'indice 1 de ans est egale a "right" ou "r"
+                # alors assigner a la variable a l'indice 1 de ans la valeur 2
             # sinon
                 # alors assigner a ansValid la valeur False
 """CHANGEMENT DE PARTIE USER"""
