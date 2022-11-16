@@ -72,24 +72,16 @@ def morpion():
         for i in range(len(morp)):
             # alors
             # si les valeurs d'indice 0, 1 et 2 dans la liste d'indice i dans morp sont toutes egales a "X  " ou les valeurs d'indice i dans les listes d'indices 0, 1 et 2 dans morp sont toutes egales a "X  "
-            if morp[i][0] == "X  " and morp[i][1] == "X  " and morp[i][2] == "X  ":
+            if morp[i][0] == "O  " and morp[i][1] == "O  " and morp[i][2] == "O  " or morp[0][i] == "O  " and morp[1][i] == "O  " and morp[2][i] == "O  ":
                 # alors assigner a playerWin la valeur True
-                playerWin = True
-            # sinon si les valeurs d'indice 0, 1 et 2 dans la liste d'indice i dans morp sont toutes egales a "O  " ou les valeurs d'indice i dans les listes d'indices 0, 1 et 2 dans morp sont toutes egales a "O  "
-            elif morp[i][0] == "O  " and morp[i][1] == "O  " and morp[i][2] == "O  ":
-                # alors assigner a comWin la valeur True
                 comWin = True
         # si la valeur d'indice 0 dans la liste d'indice 0 de morp, la valeur d'indice 1 dans la liste d'indice 1 dans morp et la valeur d'indice 2 de la liste d'indice 2 dans morp sont egales a "X  " ou la valeur d'indice 0 dans la liste d'indice 2 de morp, la valeur d'indice 1 dans la liste d'indice 1 dans morp et la valeur d'indice 2 de la liste d'indice 0 dans morp sont egales a "X  "
-        if (morp[0][0] == "X  " and morp[1][1] == "X  " and morp[2][2] == "X  ") or (morp[2][0] == "X  " and morp[1][1] == "X  " and morp[0][2] == "X  "):
-                # alors assigner a playerWin la valeur True
-                playerWin = True
-        # sinon si la valeur d'indice 0 dans la liste d'indice 0 de morp, la valeur d'indice 1 dans la liste d'indice 1 dans morp et la valeur d'indice 2 de la liste d'indice 2 dans morp sont egales a "O  " ou la valeur d'indice 0 dans la liste d'indice 2 de morp, la valeur d'indice 1 dans la liste d'indice 1 dans morp et la valeur d'indice 2 de la liste d'indice 0 dans morp sont egales a "O  "
         if (morp[0][0] == "O  " and morp[1][1] == "O  " and morp[2][2] == "O  ") or (morp[2][0] == "O  " and morp[1][1] == "O  " and morp[0][2] == "O  "):
-                # alors assigner a comWin la valeur True
+                # alors assigner a playerWin la valeur True
                 comWin = True
 
-        # si numPlays est inferieure a 9
-        if numPlays < 9 :
+        # si comWin est egale a False et playerWin est egale a False et numPlays est inferieure a 9
+        if comWin == False and playerWin == False and numPlays < 9 :
             # alors afficher le message "Votre tour"
             print("Votre tour")
             # assigner a la variable userTurnDone la valeur False
@@ -169,24 +161,16 @@ def morpion():
         for i in range(len(morp)):
             # alors
             # si les valeurs d'indice 0, 1 et 2 dans la liste d'indice i dans morp sont toutes egales a "X  " ou les valeurs d'indice i dans les listes d'indices 0, 1 et 2 dans morp sont toutes egales a "X  "
-            if morp[i][0] == "X  " and morp[i][1] == "X  " and morp[i][2] == "X  ":
+            if morp[i][0] == "X  " and morp[i][1] == "X  " and morp[i][2] == "X  " or morp[0][i] == "X  " and morp[1][i] == "X  " and morp[2][i] == "X  ":
                 # alors assigner a playerWin la valeur True
                 playerWin = True
-            # sinon si les valeurs d'indice 0, 1 et 2 dans la liste d'indice i dans morp sont toutes egales a "O  " ou les valeurs d'indice i dans les listes d'indices 0, 1 et 2 dans morp sont toutes egales a "O  "
-            elif morp[i][0] == "O  " and morp[i][1] == "O  " and morp[i][2] == "O  ":
-                # alors assigner a comWin la valeur True
-                comWin = True
         # si la valeur d'indice 0 dans la liste d'indice 0 de morp, la valeur d'indice 1 dans la liste d'indice 1 dans morp et la valeur d'indice 2 de la liste d'indice 2 dans morp sont egales a "X  " ou la valeur d'indice 0 dans la liste d'indice 2 de morp, la valeur d'indice 1 dans la liste d'indice 1 dans morp et la valeur d'indice 2 de la liste d'indice 0 dans morp sont egales a "X  "
         if (morp[0][0] == "X  " and morp[1][1] == "X  " and morp[2][2] == "X  ") or (morp[2][0] == "X  " and morp[1][1] == "X  " and morp[0][2] == "X  "):
                 # alors assigner a playerWin la valeur True
                 playerWin = True
-        # sinon si la valeur d'indice 0 dans la liste d'indice 0 de morp, la valeur d'indice 1 dans la liste d'indice 1 dans morp et la valeur d'indice 2 de la liste d'indice 2 dans morp sont egales a "O  " ou la valeur d'indice 0 dans la liste d'indice 2 de morp, la valeur d'indice 1 dans la liste d'indice 1 dans morp et la valeur d'indice 2 de la liste d'indice 0 dans morp sont egales a "O  "
-        if (morp[0][0] == "O  " and morp[1][1] == "O  " and morp[2][2] == "O  ") or (morp[2][0] == "O  " and morp[1][1] == "O  " and morp[0][2] == "O  "):
-                # alors assigner a comWin la valeur True
-                comWin = True
         
-        # si userStart est egale a "y" et numPlays est inferieure a 9:
-        if userStart == "y" and numPlays < 9:
+        # si userStart est egale a "y" et comWin est egale a False et playerWin est egale a False et numPlays est inferieure a 9:
+        if userStart == "y" and comWin == False and playerWin == False and numPlays < 9:
             # alors assigner a la variable comTurnDone la valeur False
             comTurnDone = False
             # afficher le message "Tour de l'ordi"
@@ -210,19 +194,11 @@ def morpion():
         # pour i chaque valeur jusqu'au retour de la fonction len ayant pour parametre "morp" moins 1
         for i in range(len(morp)):
             # alors
-            # si les valeurs d'indice 0, 1 et 2 dans la liste d'indice i dans morp sont toutes egales a "X  " ou les valeurs d'indice i dans les listes d'indices 0, 1 et 2 dans morp sont toutes egales a "X  "
-            if morp[i][0] == "X  " and morp[i][1] == "X  " and morp[i][2] == "X  ":
-                # alors assigner a playerWin la valeur True
-                playerWin = True
-            # sinon si les valeurs d'indice 0, 1 et 2 dans la liste d'indice i dans morp sont toutes egales a "O  " ou les valeurs d'indice i dans les listes d'indices 0, 1 et 2 dans morp sont toutes egales a "O  "
-            elif morp[i][0] == "O  " and morp[i][1] == "O  " and morp[i][2] == "O  ":
+            # si les valeurs d'indice 0, 1 et 2 dans la liste d'indice i dans morp sont toutes egales a "O  " ou les valeurs d'indice i dans les listes d'indices 0, 1 et 2 dans morp sont toutes egales a "O  "
+            if morp[i][0] == "O  " and morp[i][1] == "O  " and morp[i][2] == "O  " or morp[0][i] == "O  " and morp[1][i] == "O  " and morp[2][i] == "O  ":
                 # alors assigner a comWin la valeur True
                 comWin = True
-        # si la valeur d'indice 0 dans la liste d'indice 0 de morp, la valeur d'indice 1 dans la liste d'indice 1 dans morp et la valeur d'indice 2 de la liste d'indice 2 dans morp sont egales a "X  " ou la valeur d'indice 0 dans la liste d'indice 2 de morp, la valeur d'indice 1 dans la liste d'indice 1 dans morp et la valeur d'indice 2 de la liste d'indice 0 dans morp sont egales a "X  "
-        if (morp[0][0] == "X  " and morp[1][1] == "X  " and morp[2][2] == "X  ") or (morp[2][0] == "X  " and morp[1][1] == "X  " and morp[0][2] == "X  "):
-                # alors assigner a playerWin la valeur True
-                playerWin = True
-        # sinon si la valeur d'indice 0 dans la liste d'indice 0 de morp, la valeur d'indice 1 dans la liste d'indice 1 dans morp et la valeur d'indice 2 de la liste d'indice 2 dans morp sont egales a "O  " ou la valeur d'indice 0 dans la liste d'indice 2 de morp, la valeur d'indice 1 dans la liste d'indice 1 dans morp et la valeur d'indice 2 de la liste d'indice 0 dans morp sont egales a "O  "
+        # si la valeur d'indice 0 dans la liste d'indice 0 de morp, la valeur d'indice 1 dans la liste d'indice 1 dans morp et la valeur d'indice 2 de la liste d'indice 2 dans morp sont egales a "O  " ou la valeur d'indice 0 dans la liste d'indice 2 de morp, la valeur d'indice 1 dans la liste d'indice 1 dans morp et la valeur d'indice 2 de la liste d'indice 0 dans morp sont egales a "O  "
         if (morp[0][0] == "O  " and morp[1][1] == "O  " and morp[2][2] == "O  ") or (morp[2][0] == "O  " and morp[1][1] == "O  " and morp[0][2] == "O  "):
                 # alors assigner a comWin la valeur True
                 comWin = True
@@ -232,7 +208,7 @@ def morpion():
         # alors renvoyer le message "Vous avez gagné!"
         return print("Vous avez gagné!")
     # Sinon si comWin est egale a True
-    if comWin == True:
+    elif comWin == True:
         # alors renvoyer le message "Vous avez perdu!"
         return print("Vous avez perdu!")
     # Sinon 
