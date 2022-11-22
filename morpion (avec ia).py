@@ -52,12 +52,7 @@ def aiProcess(tab,playerStart):
                 return [0,2]
             elif tab[2][0]=="_  " and tab[1][0]=="_  ":
                 return [2,0]
-        # si il n'y a pas eu de retour jusque là on a pas vraiment de stratégie
-        while 1:
-            # l'ordi va chercher une place au hasard jusqu'à en trouver une vide
-            comAns = [random.randint(0,2),random.randint(0,2)]
-            if tab[comAns[0]][comAns[1]] == "_  ":
-                return comAns
+
     # si l'ordinateur joue en deuxième
     else: 
         if tab[1][1]=="_  ":
@@ -88,12 +83,14 @@ def aiProcess(tab,playerStart):
                         return [0,2]
                     elif tab[2][2]=="_  ":
                         return [2,2]
-        # on a pas vraiment de stratégie à part bloquer quand l'adversaire joue au centre et bloquer se fait automatiquement au début de la fonction
-        while 1:
-            # l'ordi va chercher une place au hasard jusqu'à en trouver une vide
-            comAns = [random.randint(0,2),random.randint(0,2)]
-            if tab[comAns[0]][comAns[1]] == "_  ":
-                return comAns
+
+    # quand on a épuisé les techniques logiques
+    # on a pas vraiment de stratégie à part bloquer quand l'adversaire joue au centre et bloquer se fait automatiquement au début de la fonction
+    while 1:
+        # l'ordi va chercher une place au hasard jusqu'à en trouver une vide
+        comAns = [random.randint(0,2),random.randint(0,2)]
+        if tab[comAns[0]][comAns[1]] == "_  ":
+            return comAns
 
 
 # définition de la fonction qui va contenir notre jeu
