@@ -3,18 +3,6 @@ import random
 
 # Fonction d'affichage du tableau de jeu
 def display(tab):
-    """
-    Function display(tab)
-
-    tab is a tuple or a list in 2 dimensions.
-
-    display(tab) returns None and display in the shell a simple visual representation of tab,
-    splitting each list/tuple in tab on different lines, removing the container syntax 
-    (which means on the contents are visible, [["X ","Y "],["A ","B "]] would be shown as the following:
-    X Y 
-    A B
-    )
-    """
     for i in tab:
         for u in i:
             print(u,end="")
@@ -23,45 +11,26 @@ def display(tab):
 # Fonction d'intelligence artificielle
 
 def aiProcess(tab,playerStart):
-    # l'ordi cherche des opportunités de gagner
+    # l'ordi cherche des opportunités de gagner/bloquer le joueur
     # dans les diagonales
-    if (tab[0][0] == "O  " and tab[1][1] == "O  " and tab[2][2]=="_  "):
-        return [2,2]
-    elif (tab[2][2] == "O  " and tab[1][1] == "O  " and tab[0][0]=="_  "):
-        return [0,0]
-    elif (tab[2][0] == "O  " and tab[1][1] == "O  " and tab[0][2]=="_  "):
-        return [0,2]
-    elif (tab[0][2] == "O  " and tab[1][1] == "O  " and tab[2][0]=="_  "):
-        return [2,0]
-    elif ((tab[2][2] == "O  " and tab[0][0] == "O  ") or (tab[0][2] == "O  " and tab[0][2] == "O  ") and tab[1][1] == "_  ") :
-        return [1,1]
+    for i in ["O  ","X  "]:
+        if (tab[0][0] == i and tab[1][1] == i and tab[2][2]=="_  "):
+            return [2,2]
+        elif (tab[2][2] == i and tab[1][1] == i and tab[0][0]=="_  "):
+            return [0,0]
+        elif (tab[2][0] == i and tab[1][1] == i and tab[0][2]=="_  "):
+            return [0,2]
+        elif (tab[0][2] == i and tab[1][1] == i and tab[2][0]=="_  "):
+            return [2,0]
+        elif (((tab[2][2] == i and tab[0][0] == i and tab[1][1] == "_  ") or (tab[0][2] == i and tab[2][0] == i)) and tab[1][1] == "_  ") :
+            return [1,1]
     # dans les verticales et horizontales
-    for i in range(len(tab)):
-        for u in range(len(tab[i])):
-            if tab[i][u] == "_  ":
-                if (tab[i-1][u] == "O  " and tab[i-2][u] =="O  ") or (tab[i][u-1] =="O  " and tab[i][u-2] == "O  "):
-                    print(i,u)
-                    return [i,u]    
-                    
-    # l'ordi cherche des opportunités de bloquer le joueur
-    # dans les diagonales
-    if (tab[0][0] == "X  " and tab[1][1] == "X  " and tab[2][2]=="_  "):
-        return [2,2]
-    elif (tab[2][2] == "X  " and tab[1][1] == "X  " and tab[0][0]=="_  "):
-        return [0,0]
-    elif (tab[2][0] == "X  " and tab[1][1] == "X  " and tab[0][2]=="_  "):
-        return [0,2]
-    elif (tab[0][2] == "X  " and tab[1][1] == "X  " and tab[2][0]=="_  "):
-        return [2,0]
-    elif ((tab[2][2] == "X  " and tab[0][0] == "X  ") or (tab[0][2] == "X  " and tab[0][2] == "X  ") and tab[1][1] == "_  ") :
-        return [1,1]
-    # dans les verticales et horizontales
-    for i in range(len(tab)):
-        for u in range(len(tab[i])):
-            if tab[i][u] == "_  ":
-                if (tab[i-1][u] == "X  " and tab[i-2][u] =="X  ") or (tab[i][u-1] =="X  " and tab[i][u-2] == "X  "):
-                    print(i,u)
-                    return [i,u]    
+    for w in ["O  ","X  "]:
+        for line in range(len(tab)):
+            for col in range(len(tab[line])):
+                if tab[line][col] == "_  ":
+                    if (tab[line-1][col] == w and tab[line-2][col] == w) or (tab[line][col-1] == w and tab[line][col-2] == w):
+                        return [line,col]    
 
     # si l'ordinateur joue en premier
     if playerStart =="n":
@@ -148,7 +117,7 @@ def morpion():
         if userStart == "n":
             print("Tour de l'ordi")
             t=aiProcess(morp,"n")
-            morp[t[0]][t[1]]="0  " 
+            morp[t[0]][t[1]]="O  " 
             display(morp)
             numPlays +=1
         
@@ -217,7 +186,7 @@ def morpion():
         if userStart == "y" and comWin == False and playerWin == False and numPlays < 9:
             print("Tour de l'ordi")
             t=aiProcess(morp,"y")
-            morp[t[0]][t[1]]="0  " 
+            morp[t[0]][t[1]]="O  " 
             display(morp)
             numPlays +=1
 
