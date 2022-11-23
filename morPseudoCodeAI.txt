@@ -30,67 +30,73 @@
             # alors pour la variable col dans une gamme de nombres entre 0 et le retour de la fonction len() sur le tableau d'indice line dans le tableau tab
                 # alors si la variable dans tab aux indices lines puis col est egale a "_  "
                     # alors si les valeurs dans tab aux indices line moins un puis col et line moins deux puis col sont toutes deux egales a w ou alors les valeurs dans tab aux indices line puis col moins un et line puis col moins 2 sont toutes deux egales a w
-                        # renvoyer le tableau de valeurs line puis col
+                        # alors renvoyer le tableau de valeurs line puis col
 
-    # si l'ordinateur joue en premier
-    if playerStart =="n":
-        if tab[0][0] == "_  ":
-            return [0,0]
-        elif tab[1][1] == "X  ":
-            if tab[2][2] =="_  ":
-                return [2,2]
-            elif tab[2][2] == "O  " and tab[2][0] =="X  " and tab[0][2]=="_  " and tab[0][1]=="_  ":
-                return [0,2]
-            elif tab[2][2] == "O  " and tab[0][2] =="X  " and tab[2][0]=="_  " and tab[1][0]=="_  ":
-                return [2,0]
-        elif tab[1][1] == "_  ":
-            if (tab[0][2] == "O  " or tab[2][0] == "O  ") and tab[0][2] != "X  " and tab[2][0] != "X  " and tab[2][2] != "X  ":
-                return [1,1]
-            elif (tab[0][2] == "O  " and tab[0][1] != "X  ") or (tab[2][0] == "O  " and tab[1][0] != "X  ") and tab[2][2] == "_  ":
-                return [2,2]
-            elif tab[0][2]=="_  " and tab[0][1]=="_  ":
-                return [0,2]
-            elif tab[2][0]=="_  " and tab[1][0]=="_  ":
-                return [2,0]
+    # si la valeur de la variable playerStart est egale a "n"
+        # alors
+        # si la variable dans tab aux indices 0 puis 0 est egale a "_  "
+            # alors renvoyer le tableau de valeurs 0 puis 0
+        # sinon si la variable dans tab aux indices 1 puis 1 est egale a "X  "
+            # alors
+            # si la variable dans tab aux indices 2 puis 2 est egale a "_  "
+                # alors renvoyer le tableau de valeurs 2 puis 2
+            # si la variable dans tab aux indices 2 puis 2 est egale a "O  " et la variable dans tab aux indices 2 puis 0 est egale a "X  " et les variables dans tab aux indices 0 puis 2 et 0 puis 1 est egale a "_  "
+                # alors renvoyer le tableau de valeurs 0 puis 2
+            # si la variable dans tab aux indices 2 puis 2 est egale a "O  " et la variable dans tab aux indices 0 puis 2 est egale a "X  " et les variables dans tab aux indices 2 puis 0 et 1 puis 0 est egale a "_  "
+                # alors renvoyer le tableau de valeurs 2 puis 0
+        # sinon si la variable dans tab aux indices 1 puis 1 est egale a "_  "
+            # alors
+            # si au moins l'une des variables dans tab aux indices 0 puis 2 ou 2 puis 0 est egale a "O  " et les variables aux indices 0 puis 2, 2 puis 0 et 2 puis 2 ne sont pas egales a "X  "
+                # alors renvoyer le tableau de valeurs 1 puis 1
+            # sinon si la variable dans tab aux indices 0 puis 2 est egale a "O  " et celle aux indices 0 puis 1 n'est pas egale a "X  " et celle aux indices 2 puis 2 est egale a "_  " ou alors si la variable dans tab aux indices 2 puis 0 est egale a "O  " et celle aux indices 1 puis 0 n'est pas egale a "X  " et celle aux indices 2 puis 2 est egale a "_  "
+                # alors renvoyer le tableau de valeurs 2 puis 2
+            # sinon si les variables aux indices 0 puis 2 et 0 puis 1 sont egales a "_  "
+                # alors renvoyer le tableau de valeurs 0 puis 2
+            # sinon si les variables aux indices 2 puis 0 et 1 puis 0 sont egales a "_  "
+                # alors renvoyer le tableau de valeurs 2 puis 0
 
-    # si l'ordinateur joue en deuxième
-    else: 
-        if tab[1][1]=="_  ":
-            return [1,1]
-        elif tab[1][1] == "X  " and tab[2][2] == "_  ":
-            return [2,2]
-        # si cette condition passe, il est garantit que l'utilisateur ait au moins joué deux foix
-        elif tab[1][1] == "O  ":
-            if (tab[1][0] == "X  " and tab[1][2] == "X  "):
-                if tab[0][1] == "_  " and (tab[0][0]=="_  " or tab[0][0]=="O  ") and tab[0][2]=="_  ":
-                    if tab[0][0]=="_  ":
-                        return [0,0]
-                    elif tab[0][2]=="_  ":
-                        return [0,2]
-                elif tab[2][1] == "_  " and (tab[2][0]=="_  " or tab[2][0]=="O  ") and tab[2][2]=="_  ":
-                    if tab[2][0]=="_  ":
-                        return [2,0]
-                    elif tab[2][2]=="_  ":
-                        return [2,2]
-            elif (tab[0][1] == "X  " and tab[2][1] == "X  "):
-                if tab[1][0] == "_  " and (tab[0][0]=="_  " or tab[0][0]=="O  ") and tab[2][0]=="_  ":
-                    if tab[0][0]=="_  ":
-                        return [0,0]
-                    elif tab[2][0]=="_  ":
-                        return [2,0]
-                elif tab[1][2] == "_  " and (tab[0][2]=="_  " or tab[0][2]=="O  ") and tab[2][2]=="_  ":
-                    if tab[0][2]=="_  ":
-                        return [0,2]
-                    elif tab[2][2]=="_  ":
-                        return [2,2]
+    # sinon
+        # alors 
+        # si la variable dans tab a l'indice 1 puis 1 est egale a "_  "
+            # alors renvoyer le tableau de valeurs 1 puis 1
+        # sinon si la variable dans tab a l'indice 1 puis 1 est egale a "X  " et la variable dans tab a l'indice 2 puis 2 est egale a "_  "
+            # alors renvoyer le tableau de valeurs 2 puis 2
+        # sinon si la variable dans tab a l'indice 1 puis 1 est egale a "O  "
+            # alors 
+            # si la variable dans tab a l'indice 1 puis 0 est egale a "X  " et la variable dans tab a l'indice 1 puis 2 est egale a "X  "
+                # alors
+                # si les variable dans tab aux indices 0 puis 1 et 0 puis 2 sont egales a "_  " et la valeur dans tab aux indices 0 puis 0 est egale a "_  " ou "O  "
+                    # alors
+                    # si la variable dans tab aux indices 0 puis 0 est egale a "_  "
+                        # alors renvoyer le tableau de valeurs 0 puis 0
+                    # sinon si la variable dans tab aux indices 0 puis 2 est egale a "_  "
+                        # alors renvoyer le tableau de valeurs 0 puis 2
+                # sinon si les variable dans tab aux indices 2 puis 1 et 2 puis 2 sont egales a "_  " et la valeur dans tab aux indices 2 puis 0 est egale a "_  " ou "O  "
+                    # alors
+                    # si la variable dans tab aux indices 2 puis 0 est egale a "_  "
+                        # alors renvoyer le tableau de valeurs 2 puis 0
+                    # sinon si la variable dans tab aux indices 2 puis 2 est egale a "_  "
+                        # alors renvoyer le tableau de valeurs 2 puis 2
+            # sinon si la variable dans tab a l'indice 0 puis 1 est egale a "X  " et la variable dans tab a l'indice 2 puis 1 est egale a "X  "
+                # alors
+                # si les variable dans tab aux indices 1 puis 0 et 2 puis 0 sonts egales a "_  " et la valeur dans tab aux indices 0 puis 0 est egale a "_  " ou "O  "
+                    # alors
+                    # si la variable dans tab aux indices 0 puis 0 est egale a "_  "
+                        # alors renvoyer le tableau de valeurs 0 puis 0
+                    # sinon si la variable dans tab aux indices 2 puis 0 est egale a "_  "
+                        # alors renvoyer le tableau de valeurs 2 puis 0
+                # sinon si les variable dans tab aux indices 1 puis 2 et 2 puis 2 sont egales a "_  " et la valeur dans tab aux indices 0 puis 2 est egale a "_  " ou "O  "
+                    # alors
+                    # si la variable dans tab aux indices 0 puis 2 est egale a "_  "
+                        # alors renvoyer le tableau de valeurs 0 puis 2
+                    # sinon si la variable dans tab aux indices 2 puis 2 est egale a "_  "
+                        # alors renvoyer le tableau de valeurs 2 puis 2
 
-    # quand on a épuisé les techniques logiques
-    # on a pas vraiment de stratégie à part bloquer quand l'adversaire joue au centre et bloquer se fait automatiquement au début de la fonction
-    while 1:
-        # l'ordi va alors chercher une place au hasard jusqu'à en trouver une vide
-        comAns = [random.randint(0,2),random.randint(0,2)]
-        if tab[comAns[0]][comAns[1]] == "_  ":
-            return comAns
+    # boucle infinie jusqu'à ce que la fonction face un return
+        # alors
+        # assigner a la variable comAns un tableau contenant deux retours de la fonction random()
+        # si la variable dans tab aux indices correspondants aux valeurs de comAns aux indices 0 puis 1 est egale a "_  "
+            # alors renvoyer le tableau comAns
 
 # definir une fonction morpion() qui ne prend aucun parametre
     # assigner a la variable morp le tableau [["_  ","_  ","_  "],["_  ","_  ","_  "],["_  ","_  ","_  "]]
@@ -107,17 +113,13 @@
             # alors afficher le message "Réponse invalide!"
     # tant que comWin est egale a False et playerWin est egale a False et numPlays est inferieure a 9
         # alors
-        # si userStart est egale a "n":
-            # alors assigner a la variable comTurnDone la valeur False
+        # si userStart est egale a "n" et comWin est egale a False et playerWin est egale a False et numPlays est inferieure a 9:
+            # alors
             # afficher le message "Tour de l'ordi"
-            # tant que comTurnDone est egale a False
-                # alors
-                # assigner a comAns un tableau contenant deux retours de la fonction random()
-                # si la valeur de la variable dans morp a l'indice u dans i (où i est la valeur dans comAns à l'indice 0 et u est la valeur dans comAns à l'indice 1) est egale a "_  "
-                    # alors assigner a la variable dans morp aux indices u dans i (où i est la valeur dans comAns à l'indice 0 et u est la valeur dans comAns à l'indice 1) la valeur "O  "
-                    # utiliser la fonction display() avec morp en parametre
-                    # incrementer numPlays de 1
-                    # assigner a comTurnDone la valeur True
+            # assigner a la variable t le renvoi de la fonction aiProcess() avec pour arguments le tableau morp et la chaine de caracteres "n"
+            # assigner la valeur "O  " a la variable dans le tableau morp aux indices correspondants aux valeurs dans t aux indices 0 puis 1
+            # utiliser la fonction display() avec le tableau morp en parametre
+            # incrementer numPlays de 1
         
         # pour i chaque valeur jusqu'au retour de la fonction len ayant pour parametre "morp" moins 1
             # alors
@@ -175,16 +177,12 @@
                 # alors assigner a playerWin la valeur True
         
         # si userStart est egale a "y" et comWin est egale a False et playerWin est egale a False et numPlays est inferieure a 9:
-            # alors assigner a la variable comTurnDone la valeur False
+            # alors
             # afficher le message "Tour de l'ordi"
-            # tant que comTurnDone est egale a False
-                # alors
-                # assigner a comAns un tableau contenant deux retours de la fonction random()
-                # si la valeur de la variable dans morp a l'indice u dans i (où i est la valeur dans comAns à l'indice 0 et u est la valeur dans comAns à l'indice 1) est egale a "_  "
-                    # alors assigner a la variable dans morp aux indices u dans i (où i est la valeur dans comAns à l'indice 0 et u est la valeur dans comAns à l'indice 1) la valeur "O  "
-                    # utiliser la fonction display() avec morp en parametre
-                    # incrementer numPlays de 1
-                    # assigner a comTurnDone la valeur True
+            # assigner a la variable t le renvoi de la fonction aiProcess() avec pour arguments le tableau morp et la chaine de caracteres "y"
+            # assigner la valeur "O  " a la variable dans le tableau morp aux indices correspondants aux valeurs dans t aux indices 0 puis 1
+            # utiliser la fonction display() avec le tableau morp en parametre
+            # incrementer numPlays de 1
 
         # pour i chaque valeur jusqu'au retour de la fonction len ayant pour parametre "morp" moins 1
             # alors
