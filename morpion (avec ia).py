@@ -87,7 +87,7 @@ def aiProcess(tab,playerStart):
     # quand on a épuisé les techniques logiques
     # on a pas vraiment de stratégie à part bloquer quand l'adversaire joue au centre et bloquer se fait automatiquement au début de la fonction
     while 1:
-        # l'ordi va chercher une place au hasard jusqu'à en trouver une vide
+        # l'ordi va alors chercher une place au hasard jusqu'à en trouver une vide
         comAns = [random.randint(0,2),random.randint(0,2)]
         if tab[comAns[0]][comAns[1]] == "_  ":
             return comAns
