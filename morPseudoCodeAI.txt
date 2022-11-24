@@ -4,6 +4,7 @@
 # On admet une fonction input() qui enregistre l'entree d'un joueur sous forme de str (avec optionellement un message faisant office question)
 # On admet une fonction split() qui prend en parametre une chaine de caracteres str et renvoie une liste separant le contenu de str a chaque espace
 # On admet une fonction len() qui renvoie la longueur d'une liste en parametre
+# on admet une fonction open() qui ouvre un lien dans le navigateur internet
 
 # definir une fonction display(tab) qui prend en parametre un tableau tab contenant des tableaux et l'affiche ligne par ligne
     # pour i dans tab
@@ -109,7 +110,9 @@
         # assigner a la variable userStart le retour de la fonction input() avec le message "Voulez-vous jouer en premier ? y/n"
         # si userStart est egale a "y" ou "n"
             # alors assigner a choiceStartDone la valeur True
-        # sinon si userStart est egale à "One Piece"
+        # sinon si userStart est egale a "tuto"
+            # utiliser la fonction open() sur le lien "https://fr.wikihow.com/gagner-au-morpion"
+        # sinon si userStart est egale a "One Piece"
             # alors afficher un easter egg
         # sinon
             # alors afficher le message "Réponse invalide!"
@@ -176,6 +179,7 @@
                 # si ansValid est egale a False et nbError est egale a 4
                     # alors afficher un easter egg
                     # assigner a playerwin la valeur true
+                    # assigner a userTurnDone la valeur True
                 # sinon si ansValid est egale a False
                     # alors afficher "Réponse Invalide !"
         
