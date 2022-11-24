@@ -202,7 +202,7 @@
                 # alors assigner a comWin la valeur True
 
     # Si playerWin est egale a True
-        # alors renvoyer le message "Vous avez gagné!"
+        # alors renvoyer le message "Vous avez gagné!" et un assemblage ascii qui ressemble aux lettres "gg"
     # Sinon si comWin est egale a True
         # alors renvoyer le message "Vous avez perdu!"
     # Sinon 
