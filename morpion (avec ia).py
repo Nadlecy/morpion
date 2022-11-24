@@ -93,6 +93,14 @@ def aiProcess(tab,playerStart):
         if tab[comAns[0]][comAns[1]] == "_  ":
             return comAns
 
+# définition de la fonction qui va vérifier si un coup fait gagner un des joueurs
+def anyWin(board, plr):
+    for i in range(len(board)):
+        if board[i][0] == plr and board[i][1] == plr and board[i][2] == plr or board[0][i] == plr and board[1][i] == plr and board[2][i] == plr:
+            return True
+    if (board[0][0] == plr and board[1][1] == plr and board[2][2] == plr) or (board[2][0] == plr and board[1][1] == plr and board[0][2] == plr):
+        return True
+
 
 # définition de la fonction qui va contenir notre jeu
 def morpion():
@@ -124,11 +132,9 @@ def morpion():
             numPlays +=1
         
         # on vérifie si le dernier coup de l'ordi le fait gagner
-        for i in range(len(morp)):
-            if morp[i][0] == "O  " and morp[i][1] == "O  " and morp[i][2] == "O  " or morp[0][i] == "O  " and morp[1][i] == "O  " and morp[2][i] == "O  ":
-                comWin = True
-        if (morp[0][0] == "O  " and morp[1][1] == "O  " and morp[2][2] == "O  ") or (morp[2][0] == "O  " and morp[1][1] == "O  " and morp[0][2] == "O  "):
-                comWin = True
+        if anyWin(morp, "O  ") ==True:
+            comWin = anyWin(morp, "O  ")
+
 
         # Tour du joueur
         if comWin == False and playerWin == False and numPlays < 9 :
@@ -185,13 +191,10 @@ def morpion():
                     userTurnDone = True
                 elif ansValid == False:
                     print("Réponse invalide!")
-        
+                    
         # on vérifie si le dernier coup du joueur le fait gagner
-        for i in range(len(morp)):
-            if morp[i][0] == "X  " and morp[i][1] == "X  " and morp[i][2] == "X  " or morp[0][i] == "X  " and morp[1][i] == "X  " and morp[2][i] == "X  ":
-                playerWin = True
-        if (morp[0][0] == "X  " and morp[1][1] == "X  " and morp[2][2] == "X  ") or (morp[2][0] == "X  " and morp[1][1] == "X  " and morp[0][2] == "X  "):
-                playerWin = True
+        if anyWin(morp, "X  ") ==True:
+            comWin = anyWin(morp, "X  ")
         
         # l'ordi joue ici quand le joueur joue en premier
         if userStart == "y" and comWin == False and playerWin == False and numPlays < 9:
@@ -202,11 +205,8 @@ def morpion():
             numPlays +=1
 
         # on vérifie si le dernier coup de l'ordi le fait gagner
-        for i in range(len(morp)):
-            if morp[i][0] == "O  " and morp[i][1] == "O  " and morp[i][2] == "O  " or morp[0][i] == "O  " and morp[1][i] == "O  " and morp[2][i] == "O  ":
-                comWin = True
-        if (morp[0][0] == "O  " and morp[1][1] == "O  " and morp[2][2] == "O  ") or (morp[2][0] == "O  " and morp[1][1] == "O  " and morp[0][2] == "O  "):
-                comWin = True
+        if anyWin(morp, "O  ") ==True:
+            comWin = anyWin(morp, "O  ")
 
     # On affiche un message en fin de partie, pour 3 scénarios différents
     # le joueur gagner

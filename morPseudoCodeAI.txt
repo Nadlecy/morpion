@@ -99,6 +99,14 @@
         # si la variable dans tab aux indices correspondants aux valeurs de comAns aux indices 0 puis 1 est egale a "_  "
             # alors renvoyer le tableau comAns
 
+# definir une fonction anyWin qui prend en parametre un tableau de tableaux board et une chaine de caracteres plr
+    # pour i entre 0 et le nombre correspondants au retour de la fonction len() sur board
+        # si les variables dans board aux indices egaux à i puis 0, 1 ou 2, ou aux indices egaux a 0, 1 ou 2 puis i sont egales a plr
+            # renvoyer True
+    # si les variables d'indices 0 puis 0, 1 puis 1 et 2 puis 2 ou 2 puis 0, 1 puis 1 et 0 puis 2 sont egales a plr
+        # renvoyer True
+
+
 # definir une fonction morpion() qui ne prend aucun parametre
     # assigner a la variable morp le tableau [["_  ","_  ","_  "],["_  ","_  ","_  "],["_  ","_  ","_  "]]
     # assigner a la variable numPlays la valeur 0
