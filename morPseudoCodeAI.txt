@@ -109,6 +109,8 @@
         # assigner a la variable userStart le retour de la fonction input() avec le message "Voulez-vous jouer en premier ? y/n"
         # si userStart est egale a "y" ou "n"
             # alors assigner a choiceStartDone la valeur True
+        # sinon si userStart est egale à "One Piece"
+            # alors afficher un easter egg
         # sinon
             # alors afficher le message "Réponse invalide!"
     # tant que comWin est egale a False et playerWin est egale a False et numPlays est inferieure a 9
@@ -131,6 +133,7 @@
         # si comWin est egale a False et playerWin est egale a False et numPlays est inferieure a 9
             # alors afficher le message "Votre tour"
             # assigner a la variable userTurnDone la valeur False
+            # assigner a la variable nbError la valeur 0
             # tant que userTurnDone est egale a False
                 # assigner a la variable ans le retour de la fonction split appliquee sur le retour de la fonction input avec le message "position ? top/middle/bottom left/center/right"
                 # assigner a la variable ansValid la valeur True
@@ -144,6 +147,7 @@
                         # alors assigner a la variable a l'indice 0 de ans la valeur 2
                     # sinon
                         # alors assigner a ansValid la valeur False
+                        # incrémenter nbError de 1
                     # si ansValid est egale a True
                         #alors
                         # si la valeur a l'indice 1 de ans est egale a "left" ou "l"
@@ -154,6 +158,7 @@
                             # alors assigner a la variable a l'indice 1 de ans la valeur 2
                         # sinon
                             # alors assigner a ansValid la valeur False
+                            # incrémenter nbError de 1
 
                         # si ansValid est egale a True
                             #alors
@@ -164,9 +169,14 @@
                                 # assigner a userTurnDone la valeur True
                             # sinon 
                                 # alors assigner a ansValid la valeur False
+                                # incrémenter nbError de 1
                 # sinon
                     # alors assigner a la variable ansValid la valeur False
-                # si ansValid est egale a False
+                    # incrémenter nbError de 1
+                # si ansValid est egale a False et nbError est egale a 4
+                    # alors afficher un easter egg
+                    # assigner a playerwin la valeur true
+                # sinon si ansValid est egale a False
                     # alors afficher "Réponse Invalide !"
         
         # pour i chaque valeur jusqu'au retour de la fonction len ayant pour parametre "morp" moins 1
